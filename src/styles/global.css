@@ -1,0 +1,845 @@
+/* Global reset and styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Button Green Styles */
+button,
+.btn,
+.btn-success {
+  background-color: #086b13 !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(8, 107, 19, 0.07);
+}
+button:hover,
+.btn:hover,
+.btn-success:hover,
+button:focus,
+.btn:focus,
+.btn-success:focus {
+  background-color: #b6c800 !important;
+  color: #fff !important;
+}
+
+/* Add some custom padding for container */
+
+/* Customize Card component */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #006633b3;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #fff !important;
+  padding: 10px 15px;
+}
+
+.nav-link:hover {
+  background-color: #006633b3;
+  border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #006633b3;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.bg-dark {
+  background-color: #006633b3;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+/* Bordered container with green outline */
+.bordered-container {
+  border: 2px solid #009933;
+  border-radius: 6px;
+  padding: 30px 20px 20px 20px;
+  background: #fff;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+/* Custom navigation tabs */
+.custom-tabs {
+  display: flex;
+  border-bottom: 2px solid #009933;
+  margin-bottom: 30px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.custom-tab {
+  padding: 10px 18px 8px 18px;
+  font-weight: 500;
+  color: #222;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.2s, font-weight 0.2s;
+  font-size: 1.08rem;
+}
+.custom-tab.active {
+  border-bottom: 3px solid #009933;
+  font-weight: bold;
+  color: #009933;
+}
+
+/* Watermark background */
+.watermark-bg {
+  position: relative;
+  background: #eaf7ed;
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 600px;
+}
+.watermark-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/Watermark_sample.png') center center/60% no-repeat;
+  opacity: 0.13;
+  z-index: 0;
+}
+.aboutus-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 30px 30px 30px;
+}
+
+/* Section titles */
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 30px 0 10px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* List formatting */
+.aboutus-list {
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+  color: #222;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  padding-left: 1.2em;
+}
+.aboutus-list li {
+  margin-bottom: 7px;
+}
+.core-values-list {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+}
+.core-values-list li {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+.academics-menu {
+  width: 270px;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.academics-item {
+  background: #086b13;
+  color: #fff;
+  padding: 16px 18px;
+  font-size: 1.08rem;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, font-weight 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+
+.academics-item:last-child {
+  border-bottom: none;
+}
+
+.academics-item.active {
+  background: #b6c800;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.academics-item:hover:not(.active) {
+  background: #0a8c1c;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .academics-menu {
+    width: 100%;
+  }
+  .academics-item {
+    padding: 14px 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Academics Section Enhanced Styles */
+.academics-section-bg {
+  background: linear-gradient(135deg, #eaf7ed 60%, #f9f9f9 100%);
+  min-height: 100vh;
+}
+
+.academics-header {
+  margin-bottom: 2.5rem;
+}
+.academics-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #086b13;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.academics-subtitle {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.academics-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(8, 107, 19, 0.08);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  transition: box-shadow 0.25s, transform 0.18s, border-color 0.18s;
+  min-height: 370px;
+}
+.academics-card:hover {
+  box-shadow: 0 8px 32px rgba(8, 107, 19, 0.18);
+  transform: translateY(-6px) scale(1.03);
+  border-color: #b6c800;
+  z-index: 2;
+}
+
+.academics-icon {
+  font-size: 3.2rem;
+  color: #148506;
+  background: #eaf7ed;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(8, 107, 19, 0.07);
+}
+
+.academics-card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #086b13;
+  margin-bottom: 0.7rem;
+}
+.academics-card-desc {
+  font-size: 1.08rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  min-height: 70px;
+}
+
+.academics-learn-btn {
+  background: #08a143;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 28px;
+  font-size: 1.08rem;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(8, 107, 19, 0.07);
+}
+.academics-learn-btn:hover, .academics-learn-btn:focus {
+  background: #086b13;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .academics-card {
+    min-height: 390px;
+  }
+}
+@media (max-width: 767px) {
+  .academics-card {
+    min-height: 340px;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  .academics-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .academics-card {
+    min-height: 0;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .academics-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Admission Page Advanced Styles */
+.admission-section {
+  max-width: 600px;
+  margin: 40px auto 60px auto;
+  padding: 32px 18px;
+  background: #f9f9f9;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(8, 107, 19, 0.07);
+}
+
+.admission-header {
+  margin-bottom: 2.5rem;
+}
+.admission-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #086b13;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.admission-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.admission-req-card {
+  background: #eaf7ed;
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 2px 8px rgba(8, 107, 19, 0.06);
+}
+.admission-subheading {
+  color: #086b13;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.admission-req-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.admission-req-list li {
+  position: relative;
+  padding-left: 1.7em;
+  margin-bottom: 0.7em;
+  font-size: 1.08rem;
+  color: #222;
+}
+.admission-req-list li::before {
+  content: '\2713';
+  color: #b6c800;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1.1em;
+}
+
+.admission-form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  box-shadow: 0 2px 12px rgba(8, 107, 19, 0.08);
+}
+.admission-form .form-group {
+  margin-bottom: 1.3rem;
+}
+.admission-form label {
+  font-weight: 500;
+  color: #086b13;
+}
+.admission-form input[type="text"],
+.admission-form input[type="email"] {
+  border-radius: 6px;
+  border: 1.5px solid #b6c800;
+  font-size: 1.08rem;
+  padding: 10px 12px;
+  margin-top: 0.2rem;
+}
+.admission-form input:focus {
+  border-color: #086b13;
+  box-shadow: 0 0 0 2px #eaf7ed;
+}
+.admission-submit-btn {
+  background: #b6c800;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 1.08rem;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(8, 107, 19, 0.07);
+}
+.admission-submit-btn:hover, .admission-submit-btn:focus {
+  background: #086b13;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .admission-section {
+    padding: 12px 2px;
+    border-radius: 10px;
+  }
+  .admission-title {
+    font-size: 1.4rem;
+  }
+  .admission-form-card, .admission-req-card {
+    padding: 1.1rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+/* Contact Us Page Advanced Styles */
+.contact-section {
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  padding: 32px 18px;
+  background: #f9f9f9;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(8, 107, 19, 0.07);
+}
+
+.contact-header {
+  margin-bottom: 2.5rem;
+}
+.contact-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #086b13;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  box-shadow: 0 2px 12px rgba(8, 107, 19, 0.08);
+  margin-bottom: 0;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form-card {
+  margin-bottom: 0;
+}
+.contact-details-card {
+  margin-bottom: 0;
+}
+.contact-subheading {
+  color: #086b13;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.contact-form .form-group {
+  margin-bottom: 1.3rem;
+}
+.contact-form label {
+  font-weight: 500;
+  color: #086b13;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border-radius: 6px;
+  border: 1.5px solid #b6c800;
+  font-size: 1.08rem;
+  padding: 10px 12px;
+  margin-top: 0.2rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #086b13;
+  box-shadow: 0 0 0 2px #eaf7ed;
+}
+.contact-submit-btn {
+  background: #b6c800;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 1.08rem;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(8, 107, 19, 0.07);
+}
+.contact-submit-btn:hover, .contact-submit-btn:focus {
+  background: #086b13;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding: 18px 2px;
+    border-radius: 10px;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  .contact-card {
+    padding: 1.1rem 0.5rem 1rem 0.5rem;
+    min-height: 0;
+  }
+}
+
+.dcc-footer {
+  position: relative;
+  width: 100%;
+  background: rgba(8, 107, 19, 0.85);
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dcc-footer-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 107, 19, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dcc-footer-content {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dcc-footer-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.dcc-footer-contact {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.dcc-footer-divider {
+  width: 90%;
+  border: none;
+  border-top: 5px solid #fff;
+  margin: 18px auto 18px auto;
+  opacity: 1;
+}
+
+.dcc-footer-copy {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .dcc-footer-content {
+    padding: 30px 5px 10px 5px;
+  }
+  .dcc-footer-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .dcc-footer-contact {
+    font-size: 1rem;
+  }
+  .dcc-footer-copy {
+    font-size: 1rem;
+  }
+}
+
+.admission-reqs-section {
+  max-width: 1100px;
+  margin: 40px auto 60px auto;
+  padding: 32px 18px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(8, 107, 19, 0.07);
+  text-align: center;
+}
+
+.admission-reqs-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.admission-reqs-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.admission-reqs-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.admission-reqs-list {
+  text-align: left;
+  font-size: 1.13rem;
+  color: #222;
+  margin: 0 auto 1.5rem auto;
+  max-width: 420px;
+  padding-left: 1.2em;
+}
+
+.admission-reqs-list li {
+  margin-bottom: 0.7em;
+}
+
+.admission-reqs-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.admission-reqs-btn {
+  background: #086b13;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 22px 60px;
+  letter-spacing: 0.18em;
+  box-shadow: 0 4px 18px rgba(8, 107, 19, 0.13);
+  transition: background 0.18s, transform 0.18s;
+  margin-bottom: 18px;
+}
+
+.admission-reqs-btn:hover,
+.admission-reqs-btn:focus {
+  background: #b6c800;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .admission-reqs-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .admission-reqs-buttons {
+    gap: 20px;
+  }
+  .admission-reqs-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 18px 0;
+    font-size: 1.1rem;
+  }
+}
+
+/* Footer Contact Section Styles */
+.footer-contact-section {
+  max-width: 1200px;
+  margin: 48px auto 0 auto;
+  padding: 0 18px 40px 18px;
+  text-align: center;
+}
+.footer-contact-title {
+  color: #145c2c;
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+}
+.footer-contact-underline {
+  width: 120px;
+  height: 4px;
+  background: #145c2c;
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+}
+.footer-contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+.footer-contact-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(8, 107, 19, 0.18);
+  padding: 32px 32px 24px 32px;
+  min-width: 270px;
+  max-width: 340px;
+  flex: 1 1 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 5px solid #145c2c;
+  margin-bottom: 18px;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.footer-contact-card:hover {
+  box-shadow: 0 12px 32px rgba(8, 107, 19, 0.25);
+  transform: translateY(-4px) scale(1.03);
+}
+.footer-contact-icon {
+  font-size: 2.7rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+.footer-contact-label {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #444;
+  letter-spacing: 0.18em;
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+.footer-contact-info {
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 2px;
+}
+@media (max-width: 900px) {
+  .footer-contact-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .footer-contact-card {
+    min-width: 0;
+    width: 100%;
+    max-width: 420px;
+  }
+}

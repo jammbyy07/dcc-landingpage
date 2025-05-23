@@ -1,0 +1,44 @@
+.custom-navbar {
+  background-color: rgba(8, 107, 19, 0.85) !important;
+  padding: 15px 0;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.custom-navbar .nav-link {
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.custom-navbar .nav-link:hover {
+  background-color: #006633b3;
+  border-radius: 5px;
+}
+
+.custom-navbar .nav {
+  display: flex;
+  justify-content: flex-end; /* Align the navigation links to the right */
+  width: 100%;
+}
+
+.custom-navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.school-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-left: 5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  font-family: 'Roboto', 'Arial', sans-serif;
+  line-height: 1.1;
+}

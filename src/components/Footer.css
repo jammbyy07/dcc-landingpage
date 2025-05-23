@@ -1,0 +1,19 @@
+.footer-bg {
+  background-color: #006633b3;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-bg p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.footer-bg a {
+  color: #fff;
+}
+
+.footer-bg a:hover {
+  text-decoration: underline;
+}
